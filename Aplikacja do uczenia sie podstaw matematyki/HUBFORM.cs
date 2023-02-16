@@ -2,22 +2,22 @@
 
 namespace Aplikacja_do_uczenia_sie_podstaw_matematyki
 {
-    public partial class Form1 : Form
+    public partial class HUBFORM : Form
     {
-        public Form1()
+        public HUBFORM()
         {
             InitializeComponent();
         }
 
         private void Dodawanie_btn(object sender, MouseEventArgs e)
         {
-            Dodawanie.Form1 odwolanie_do_dodawania = new Dodawanie.Form1();
+            Dodawanie.Dodawanieform odwolanie_do_dodawania = new Dodawanie.Dodawanieform();
             odwolanie_do_dodawania.Show();
         }
 
         private void odejmowanie_btn(object sender, MouseEventArgs e)
         {
-            Odejmowanie.Form1 odwolanie_do_odejmowanie = new Odejmowanie.Form1();
+            Odejmowanie.Odejmowanie odwolanie_do_odejmowanie = new Odejmowanie.Odejmowanie();
             odwolanie_do_odejmowanie.Show();
         }
 

@@ -1,6 +1,6 @@
 ﻿namespace Dodawanie
 {
-    partial class Form1
+    partial class Dodawanieform
     {
         /// <summary>
         /// Wymagana zmienna projektanta.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dodawanieform));
             this.rownanie = new System.Windows.Forms.Label();
             this.Generuj = new System.Windows.Forms.Button();
             this.Sprawdz = new System.Windows.Forms.Button();
@@ -109,13 +110,13 @@
             this.Odpowiedz.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Odpowiedz.Location = new System.Drawing.Point(57, 206);
             this.Odpowiedz.Name = "Odpowiedz";
-            this.Odpowiedz.Size = new System.Drawing.Size(0, 52);
+            this.Odpowiedz.Size = new System.Drawing.Size(0, 51);
             this.Odpowiedz.TabIndex = 8;
             // 
             // score
             // 
             this.score.AutoSize = true;
-            this.score.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.score.BackColor = System.Drawing.Color.PaleTurquoise;
             this.score.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.score.Location = new System.Drawing.Point(799, 52);
             this.score.Name = "score";
@@ -166,7 +167,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.pictureBox1.BackColor = System.Drawing.Color.PaleTurquoise;
             this.pictureBox1.Image = global::Dodawanie.Properties.Resources.DALL_E_2023_02_15_22_11_15___Cute_icon_of_apple_character_smiling_removebg_preview;
             this.pictureBox1.Location = new System.Drawing.Point(749, 257);
             this.pictureBox1.Name = "pictureBox1";
@@ -177,14 +178,14 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.pictureBox2.BackColor = System.Drawing.Color.PaleTurquoise;
             this.pictureBox2.Location = new System.Drawing.Point(749, -2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(254, 524);
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
             // 
-            // Form1
+            // Dodawanieform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -203,8 +204,10 @@
             this.Controls.Add(this.Generuj);
             this.Controls.Add(this.rownanie);
             this.Controls.Add(this.pictureBox2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Form1";
+            this.Name = "Dodawanieform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Dodawanie";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();

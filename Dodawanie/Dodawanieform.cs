@@ -7,13 +7,13 @@ using AxWMPLib;
 namespace Dodawanie
 {
     
-    public partial class Form1 : Form
+    public partial class Dodawanieform : Form
     {
         public int liczba1;
         public int liczba2;
         public int Score_kod;
 
-        public Form1()
+        public Dodawanieform()
         {
             InitializeComponent();
         }

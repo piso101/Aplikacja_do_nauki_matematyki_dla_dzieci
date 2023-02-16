@@ -13,7 +13,7 @@ namespace Aplikacja_do_uczenia_sie_podstaw_matematyki
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new HUBFORM());
         }
     }
 }
