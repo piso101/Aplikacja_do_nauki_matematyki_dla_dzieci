@@ -46,9 +46,10 @@ namespace Dodawanie
 
         private void Sprawdz_Click(object sender, EventArgs e)
         {
-            int wynik_kod = int.Parse(wynik.Text);
+            
             try
             {
+                int wynik_kod = int.Parse(wynik.Text);
                 if ((liczba1 + liczba2) == wynik_kod)
                 {
                     Odpowiedz.Text = ("BRAWO DOBRY WYNIK!!");
@@ -67,6 +68,11 @@ namespace Dodawanie
                 }
             }
             catch { }
+        }
+
+        private void rownanie_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
