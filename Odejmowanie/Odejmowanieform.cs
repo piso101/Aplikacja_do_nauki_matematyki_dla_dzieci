@@ -2,6 +2,8 @@
 using WMPLib;
 using AxWMPLib;
 using System;
+using System.IO;
+
 
 namespace Odejmowanie
 {
@@ -10,6 +12,29 @@ namespace Odejmowanie
         public int liczba1;
         public int liczba2;
         public int Score_kod;
+        public void zapisz()
+        {
+            string score_string = Score_kod.ToString();
+            using (StreamWriter writer = new StreamWriter("C:\\wynik.txt")) 
+            {
+                writer.WriteLine(score_string);
+                Console.WriteLine(score_string);
+            }
+        }
+        public void odczytaj()
+        {
+            try
+            {
+                string pobierzwynik = File.ReadAllText("C:\\wynik.txt");
+                Score_kod = int.Parse(pobierzwynik);
+                score.Text = ("Wynik: " + Score_kod);
+                
+            }
+            catch 
+            {
+                StreamWriter sw = File.CreateText(@"C:\\wynik.txt");
+            }
+        }
         public Odejmowanie()
         {
             InitializeComponent();
@@ -31,6 +56,7 @@ namespace Odejmowanie
 
         private void button1_Click(object sender, System.EventArgs e)
         {
+            odczytaj();
             Random random = new Random();
             liczba1 = random.Next(1, 30);
             liczba2 = random.Next(1, 30);
@@ -54,12 +80,14 @@ namespace Odejmowanie
                 int wynik_kod = int.Parse(wynik.Text);
                 if (((liczba1 - liczba2) == wynik_kod)|| ((liczba2 - liczba1) == wynik_kod))
                 {
+                    
                     Odpowiedz.Text = ("BRAWO DOBRY WYNIK!!");
                     zagrajpozytywnydzwiek();
                     wynik.Text = "";
                     button1_Click(true, e);
                     Score_kod += 1;
                     score.Text = ("Wynik: " + Score_kod);
+                    zapisz();
                 }
                 else
                 {
@@ -70,6 +98,23 @@ namespace Odejmowanie
                 }
             }
             catch { }
+        }
+
+        private void wynik_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Odejmowanie_Activated(object sender, EventArgs e)
+        {
+            odczytaj();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            zapisz();
+            odczytaj();
+            
         }
     }
 }

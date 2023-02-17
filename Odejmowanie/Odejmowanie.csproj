@@ -103,5 +103,8 @@
   <ItemGroup>
     <None Include="Resources\DALL_E_2023-02-15_22.29.05_-_cute_icon_of_happy__character_looking_like_cute_boy__pointing_downwards_to_write_there_anwser-removebg-preview.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Odejmowanie.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

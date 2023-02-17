@@ -121,6 +121,9 @@
   <data name="DALL_E_2023-02-15_22.18.26_-_cute_icon_of_arrows_poiting_at_eachother_in_circle-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DALL_E_2023-02-15_22.18.26_-_cute_icon_of_arrows_poiting_at_eachother_in_circle-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="DALL_E_2023-02-15_22.29.05_-_cute_icon_of_happy__character_looking_like_cute_boy__pointing_downwards_to_write_there_anwser-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DALL_E_2023-02-15_22.29.05_-_cute_icon_of_happy__character_looking_like_cute_boy__pointing_downwards_to_write_there_anwser-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="DALL_E_2023-02-15_22.20.42_-_cute_icon_of_checking-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DALL_E_2023-02-15_22.20.42_-_cute_icon_of_checking-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -130,7 +133,7 @@
   <data name="DALL_E_2023-02-15_22.11.15_-_Cute_icon_of_apple_character_smiling-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DALL_E_2023-02-15_22.11.15_-_Cute_icon_of_apple_character_smiling-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DALL_E_2023-02-15_22.29.05_-_cute_icon_of_happy__character_looking_like_cute_boy__pointing_downwards_to_write_there_anwser-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DALL_E_2023-02-15_22.29.05_-_cute_icon_of_happy__character_looking_like_cute_boy__pointing_downwards_to_write_there_anwser-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Odejmowanie" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Odejmowanie.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
