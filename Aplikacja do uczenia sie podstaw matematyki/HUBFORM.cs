@@ -23,7 +23,7 @@ namespace Aplikacja_do_uczenia_sie_podstaw_matematyki
 
         private void mnozenie_btn(object sender, MouseEventArgs e)
         {
-            Mnozenie.Form1 odwolanie_do_mnozenia = new Mnozenie.Form1();
+            Mnozenie.mnozenieform odwolanie_do_mnozenia = new Mnozenie.mnozenieform();
             odwolanie_do_mnozenia.Show();
         }
 

@@ -1,23 +1,20 @@
 ﻿using System;
 using System.Media;
 using System.Windows.Forms;
-using NAudio;
 using WMPLib;
 using AxWMPLib;
-namespace Dodawanie
+
+namespace Mnozenie
 {
-    
-    public partial class Dodawanieform : Form
+    public partial class mnozenieform : Form
     {
         private int liczba1;
         private int liczba2;
         private int Score_kod;
-
-        public Dodawanieform()
+        public mnozenieform()
         {
             InitializeComponent();
         }
-        
         private void zagrajpozytywnydzwiek()
         {
             WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
@@ -33,24 +30,23 @@ namespace Dodawanie
 
         }
 
-        private void Generuj_Click(object sender, EventArgs e)
+        private void Generuj_Click(object sender, System.EventArgs e)
         {
             Random random = new Random();
-            liczba1 = random.Next(1, 30);
-            liczba2 = random.Next(1, 30);
+            liczba1 = random.Next(1, 10);
+            liczba2 = random.Next(1, 10);
             string liczba1_string = liczba1.ToString();
             string liczba2_string = liczba2.ToString();
 
-            rownanie.Text = (liczba1_string + "+" + liczba2_string + "=");
+            rownanie.Text = (liczba1_string + "*" + liczba2_string + "=");
         }
 
-        private void Sprawdz_Click(object sender, EventArgs e)
+        private void Sprawdz_Click(object sender, System.EventArgs e)
         {
-            
             try
             {
                 int wynik_kod = int.Parse(wynik.Text);
-                if ((liczba1 + liczba2) == wynik_kod)
+                if ((liczba1 * liczba2) == wynik_kod)
                 {
                     Odpowiedz.Text = ("BRAWO DOBRY WYNIK!!");
                     zagrajpozytywnydzwiek();
@@ -68,7 +64,7 @@ namespace Dodawanie
                 }
             }
             catch 
-            {
+            { 
                 //ten catch jest tylko po to gdy by ktos wpisal w pole cos innego niz liczbe
             }
         }

@@ -47,7 +47,6 @@
             this.rownanie.Size = new System.Drawing.Size(262, 69);
             this.rownanie.TabIndex = 3;
             this.rownanie.Text = "Rowanie";
-            this.rownanie.Click += new System.EventHandler(this.rownanie_Click);
             // 
             // Generuj
             // 
