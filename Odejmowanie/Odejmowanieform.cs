@@ -32,7 +32,7 @@ namespace Odejmowanie
             }
             catch 
             {
-                StreamWriter sw = File.CreateText(@"C:\\wynik.txt");
+                //StreamWriter sw = File.CreateText(@"C:\\wynik.txt");
             }
         }
         public Odejmowanie()

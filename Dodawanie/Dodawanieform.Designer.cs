@@ -44,9 +44,10 @@
             this.rownanie.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.rownanie.Location = new System.Drawing.Point(90, 77);
             this.rownanie.Name = "rownanie";
-            this.rownanie.Size = new System.Drawing.Size(262, 69);
+            this.rownanie.Size = new System.Drawing.Size(295, 69);
             this.rownanie.TabIndex = 3;
-            this.rownanie.Text = "Rowanie";
+            this.rownanie.Text = "Równanie";
+            this.rownanie.Click += new System.EventHandler(this.rownanie_Click);
             // 
             // Generuj
             // 

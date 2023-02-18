@@ -72,5 +72,10 @@ namespace Dodawanie
                 //ten catch jest tylko po to gdy by ktos wpisal w pole cos innego niz liczbe
             }
         }
+
+        private void rownanie_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
