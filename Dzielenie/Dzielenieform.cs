@@ -1,19 +1,21 @@
-﻿using System;
-using System.Media;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 using WMPLib;
 using AxWMPLib;
+using System;
 using System.IO;
+using static System.Net.Mime.MediaTypeNames;
 
-namespace Mnozenie
+namespace Dzielenie
 {
-    public partial class mnozenieform : Form
+    public partial class Dzielenieform : Form
     {
-        private int liczba1;
-        private int liczba2;
-        private int Score_kod;
+        public int liczba1;
+        public int liczba2;
+        public int liczba_podzielna;
+        public int Score_kod;
         public void zapisz()
         {
+
             string score_string = Score_kod.ToString();
             using (StreamWriter writer = new StreamWriter(@"D:\GitHub\wynik.txt"))
             {
@@ -38,7 +40,7 @@ namespace Mnozenie
                 }
             }
         }
-        public mnozenieform()
+        public Dzielenieform()
         {
             InitializeComponent();
         }
@@ -57,27 +59,30 @@ namespace Mnozenie
 
         }
 
-        private void Generuj_Click(object sender, System.EventArgs e)
+        private void button1_Click(object sender, System.EventArgs e)
         {
+            odczytaj();
             Random random = new Random();
             liczba1 = random.Next(1, 10);
             liczba2 = random.Next(1, 10);
-            string liczba1_string = liczba1.ToString();
+            liczba_podzielna = (liczba1 * liczba2);
+            string liczba_podzielna_string = liczba_podzielna.ToString();
             string liczba2_string = liczba2.ToString();
-            rownanie.Text = (liczba1_string + "*" + liczba2_string + "=");
+            rownanie.Text = (liczba_podzielna_string + ":" + liczba2_string + "=");
         }
-
-        private void Sprawdz_Click(object sender, System.EventArgs e)
+        private void button2_Click(object sender, System.EventArgs e)
         {
+
             try
             {
                 int wynik_kod = int.Parse(wynik.Text);
-                if ((liczba1 * liczba2) == wynik_kod)
+                if (((liczba_podzielna/liczba2) == wynik_kod))
                 {
+
                     Odpowiedz.Text = ("BRAWO DOBRY WYNIK!!");
                     zagrajpozytywnydzwiek();
                     wynik.Text = "";
-                    Generuj_Click(true, e);
+                    button1_Click(true, e);
                     Score_kod += 1;
                     score.Text = ("Wynik: " + Score_kod);
                     zapisz();
@@ -90,15 +95,22 @@ namespace Mnozenie
                     score.Text = ("Wynik: " + Score_kod);
                 }
             }
-            catch 
-            { 
-                //ten catch jest tylko po to gdy by ktos wpisal w pole cos innego niz liczbe
-            }
+            catch { }
+        }
+        private void wynik_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            zapisz();
+            odczytaj();
+
         }
 
-        private void mnozenieform_Activated(object sender, EventArgs e)
+        private void Dzielenieform_Activated(object sender, EventArgs e)
         {
-            Generuj_Click(false, e);
+            button1_Click(true, e);
             odczytaj();
         }
     }

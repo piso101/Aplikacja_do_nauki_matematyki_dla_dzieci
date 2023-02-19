@@ -4,6 +4,8 @@ using System.Windows.Forms;
 using NAudio;
 using WMPLib;
 using AxWMPLib;
+using System.IO;
+
 namespace Dodawanie
 {
     
@@ -12,6 +14,32 @@ namespace Dodawanie
         private int liczba1;
         private int liczba2;
         private int Score_kod;
+        public void zapisz()
+        {
+            string score_string = Score_kod.ToString();
+            using (StreamWriter writer = new StreamWriter(@"D:\GitHub\wynik.txt"))
+            {
+                writer.WriteLine(score_string);
+                Console.WriteLine(score_string);
+            }
+        }
+        public void odczytaj()
+        {
+            try
+            {
+                string pobierzwynik = File.ReadAllText(@"D:\GitHub\wynik.txt");
+                Score_kod = int.Parse(pobierzwynik);
+                score.Text = ("Wynik: " + Score_kod);
+
+            }
+            catch
+            {
+                using (StreamWriter writer = new StreamWriter(@"D:\GitHub\wynik.txt"))
+                {
+                    writer.Write("0");
+                }
+            }
+        }
 
         public Dodawanieform()
         {
@@ -58,6 +86,7 @@ namespace Dodawanie
                     Generuj_Click(true, e);
                     Score_kod += 1;
                     score.Text = ("Wynik: " + Score_kod);
+                    zapisz();
                 }
                 else
                 {
@@ -76,6 +105,12 @@ namespace Dodawanie
         private void rownanie_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Dodawanieform_Activated(object sender, EventArgs e)
+        {
+            Generuj_Click(false, e);
+            odczytaj();
         }
     }
 }

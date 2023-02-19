@@ -3,6 +3,7 @@ using WMPLib;
 using AxWMPLib;
 using System;
 using System.IO;
+using static System.Net.Mime.MediaTypeNames;
 
 
 namespace Odejmowanie
@@ -15,7 +16,7 @@ namespace Odejmowanie
         public void zapisz()
         {
             string score_string = Score_kod.ToString();
-            using (StreamWriter writer = new StreamWriter("C:\\wynik.txt")) 
+            using (StreamWriter writer = new StreamWriter(@"D:\GitHub\wynik.txt")) 
             {
                 writer.WriteLine(score_string);
                 Console.WriteLine(score_string);
@@ -25,14 +26,17 @@ namespace Odejmowanie
         {
             try
             {
-                string pobierzwynik = File.ReadAllText("C:\\wynik.txt");
+                string pobierzwynik = File.ReadAllText(@"D:\GitHub\wynik.txt");
                 Score_kod = int.Parse(pobierzwynik);
                 score.Text = ("Wynik: " + Score_kod);
                 
             }
             catch 
             {
-                //StreamWriter sw = File.CreateText(@"C:\\wynik.txt");
+                using (StreamWriter writer = new StreamWriter(@"D:\GitHub\wynik.txt"))
+                {
+                    writer.Write("0");
+                }
             }
         }
         public Odejmowanie()
@@ -107,6 +111,7 @@ namespace Odejmowanie
 
         private void Odejmowanie_Activated(object sender, EventArgs e)
         {
+            button1_Click(false, e);
             odczytaj();
         }
 

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Odejmowanie));
             this.generuj = new System.Windows.Forms.Button();
             this.sprawdz = new System.Windows.Forms.Button();
@@ -36,7 +35,7 @@
             this.score = new System.Windows.Forms.Label();
             this.Odpowiedz = new System.Windows.Forms.Label();
             this.wynik = new System.Windows.Forms.TextBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer();
             this.SuspendLayout();
             // 
             // generuj
@@ -67,10 +66,10 @@
             // 
             this.rownanie.AutoSize = true;
             this.rownanie.BackColor = System.Drawing.Color.Transparent;
-            this.rownanie.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rownanie.Location = new System.Drawing.Point(94, 95);
+            this.rownanie.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rownanie.Location = new System.Drawing.Point(55, 77);
             this.rownanie.Name = "rownanie";
-            this.rownanie.Size = new System.Drawing.Size(162, 38);
+            this.rownanie.Size = new System.Drawing.Size(295, 69);
             this.rownanie.TabIndex = 2;
             this.rownanie.Text = "Równanie";
             // 
@@ -99,7 +98,7 @@
             // 
             this.wynik.BackColor = System.Drawing.Color.Gainsboro;
             this.wynik.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.wynik.Location = new System.Drawing.Point(464, 95);
+            this.wynik.Location = new System.Drawing.Point(456, 95);
             this.wynik.Name = "wynik";
             this.wynik.Size = new System.Drawing.Size(169, 34);
             this.wynik.TabIndex = 6;
@@ -117,7 +116,7 @@
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.BackgroundImage = global::Odejmowanie.Properties.Resources.Odejmowanie;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1012, 518);
+            this.ClientSize = new System.Drawing.Size(1002, 522);
             this.Controls.Add(this.wynik);
             this.Controls.Add(this.Odpowiedz);
             this.Controls.Add(this.score);
