@@ -15,14 +15,14 @@ namespace Aplikacja_do_uczenia_sie_podstaw_matematyki
         {
             try
             {
-                string pobierzwynik = File.ReadAllText(@"D:\GitHub\wynik.txt");
+                string pobierzwynik = File.ReadAllText(@"wynik.txt");
                 Score_kod = int.Parse(pobierzwynik);
                 Wynik.Text = ("Wynik: " + Score_kod);
 
             }
             catch
             {
-                using (StreamWriter writer = new StreamWriter(@"D:\GitHub\wynik.txt"))
+                using (StreamWriter writer = new StreamWriter(@"wynik.txt"))
                 {
                     writer.Write("0");
                 }

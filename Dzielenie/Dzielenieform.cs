@@ -17,7 +17,7 @@ namespace Dzielenie
         {
 
             string score_string = Score_kod.ToString();
-            using (StreamWriter writer = new StreamWriter(@"D:\GitHub\wynik.txt"))
+            using (StreamWriter writer = new StreamWriter(@"wynik.txt"))
             {
                 writer.WriteLine(score_string);
                 Console.WriteLine(score_string);
@@ -27,14 +27,14 @@ namespace Dzielenie
         {
             try
             {
-                string pobierzwynik = File.ReadAllText(@"D:\GitHub\wynik.txt");
+                string pobierzwynik = File.ReadAllText(@"wynik.txt");
                 Score_kod = int.Parse(pobierzwynik);
                 score.Text = ("Wynik: " + Score_kod);
 
             }
             catch
             {
-                using (StreamWriter writer = new StreamWriter(@"D:\GitHub\wynik.txt"))
+                using (StreamWriter writer = new StreamWriter(@"wynik.txt"))
                 {
                     writer.Write("0");
                 }
@@ -43,20 +43,6 @@ namespace Dzielenie
         public Dzielenieform()
         {
             InitializeComponent();
-        }
-        private void zagrajpozytywnydzwiek()
-        {
-            WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
-            wplayer.URL = @"D:\GitHub\Aplikacja_do_nauki_matematyki_dla_dzieci\Muzyka\success-1-6297.mp3";
-            wplayer.controls.play();
-        }
-        private void zagrajnegatywnydzwiek()
-        {
-            WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
-            wplayer.URL = @"D:\GitHub\Aplikacja_do_nauki_matematyki_dla_dzieci\Muzyka\negative_beeps-6008.mp3";
-            wplayer.controls.play();
-
-
         }
 
         private void button1_Click(object sender, System.EventArgs e)
@@ -80,7 +66,7 @@ namespace Dzielenie
                 {
 
                     Odpowiedz.Text = ("BRAWO DOBRY WYNIK!!");
-                    zagrajpozytywnydzwiek();
+
                     wynik.Text = "";
                     button1_Click(true, e);
                     Score_kod += 1;
@@ -90,7 +76,7 @@ namespace Dzielenie
                 else
                 {
                     Odpowiedz.Text = ("Spróbuj Ponownie");
-                    zagrajnegatywnydzwiek();
+
                     wynik.Text = "";
                     score.Text = ("Wynik: " + Score_kod);
                 }

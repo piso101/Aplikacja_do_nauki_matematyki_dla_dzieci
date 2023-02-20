@@ -16,7 +16,7 @@ namespace Odejmowanie
         public void zapisz()
         {
             string score_string = Score_kod.ToString();
-            using (StreamWriter writer = new StreamWriter(@"D:\GitHub\wynik.txt")) 
+            using (StreamWriter writer = new StreamWriter(@"wynik.txt")) 
             {
                 writer.WriteLine(score_string);
                 Console.WriteLine(score_string);
@@ -26,14 +26,14 @@ namespace Odejmowanie
         {
             try
             {
-                string pobierzwynik = File.ReadAllText(@"D:\GitHub\wynik.txt");
+                string pobierzwynik = File.ReadAllText(@"wynik.txt");
                 Score_kod = int.Parse(pobierzwynik);
                 score.Text = ("Wynik: " + Score_kod);
                 
             }
             catch 
             {
-                using (StreamWriter writer = new StreamWriter(@"D:\GitHub\wynik.txt"))
+                using (StreamWriter writer = new StreamWriter(@"wynik.txt"))
                 {
                     writer.Write("0");
                 }
@@ -45,15 +45,15 @@ namespace Odejmowanie
         }
         private void zagrajpozytywnydzwiek()
         {
-            WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
-            wplayer.URL = @"D:\GitHub\Aplikacja_do_nauki_matematyki_dla_dzieci\Muzyka\success-1-6297.mp3";
-            wplayer.controls.play();
+            //WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
+           // wplayer.URL = @"D:\GitHub\Aplikacja_do_nauki_matematyki_dla_dzieci\Muzyka\success-1-6297.mp3";
+            //wplayer.controls.play();
         }
         private void zagrajnegatywnydzwiek()
         {
-            WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
-            wplayer.URL = @"D:\GitHub\Aplikacja_do_nauki_matematyki_dla_dzieci\Muzyka\negative_beeps-6008.mp3";
-            wplayer.controls.play();
+            //WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
+            //wplayer.URL = @"D:\GitHub\Aplikacja_do_nauki_matematyki_dla_dzieci\Muzyka\negative_beeps-6008.mp3";
+            //wplayer.controls.play();
 
 
         }
